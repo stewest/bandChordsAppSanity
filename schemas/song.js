@@ -48,6 +48,13 @@ export default {
       to: [{ type: 'timeSignature' }],
     },
     {
+      name: 'songTime',
+      title: 'Song time in seconds',
+      type: 'number',
+      description: 'Add the song duration in minutes (decimal format), like 2.5',
+      validation: Rule => Rule.min(1).max(20).precision(2)
+    },
+    {
       name: 'songContent',
       title: 'Song Content',
       type: 'array',
