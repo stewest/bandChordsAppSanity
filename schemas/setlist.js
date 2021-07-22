@@ -11,13 +11,11 @@ export default {
     },
     {
       name: 'setlistdate',
-      title: 'Datetime',
-      type: 'datetime',
+      title: 'Date',
+      type: 'date',
       description: 'The Date of the gig',
       options: {
         dateFormat: 'DD-MM-YYYY',
-        timeFormat: 'HH:mm',
-        timeStep: 15,
         calendarTodayLabel: 'Today'
       }
     },
