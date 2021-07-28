@@ -1,9 +1,19 @@
 // RichTextEditor.js
 import React from 'react';
 
-const highlightIcon = () => <span style={{ fontWeight: 'bold' }}>H</span>;
-const highlightRender = (props) => (
-  <span style={{ backgroundColor: 'yellow' }}>{props.children}</span>
+const chordsIcon = () => <span style={{ fontWeight: 'bold' }}>Chords</span>;
+const chordsRender = (props) => (
+  <span className="chords" style={{ fontWeight: 'bold' }}>{props.children}</span>
+);
+
+const sectionIcon = () => <span style={{ fontWeight: 'bold' }}>Section</span>;
+const sectionRender = (props) => (
+  <span className="section" style={{ fontStyle: 'italic' }}>{props.children}</span>
+);
+
+const infoIcon = () => <span style={{ fontWeight: 'bold' }}>Info</span>;
+const infoRender = (props) => (
+  <span className="info" style={{ fontWeight: '100', fontStyle: 'italic' }}>{props.children}</span>
 );
 
 export default {
@@ -65,19 +75,44 @@ export default {
             decorators: [
               { title: 'Strong', value: 'strong' },
               { title: 'Emphasis', value: 'em' },
-              { title: 'Code', value: 'code' },
               {
-                title: 'Highlight',
-                value: 'highlight',
+                title: 'Chords',
+                value: 'chords',
                 blockEditor: {
-                  icon: highlightIcon,
-                  render: highlightRender,
+                  icon: chordsIcon,
+                  render: chordsRender,
+                },
+              },
+              {
+                title: 'Section',
+                value: 'section',
+                blockEditor: {
+                  icon: sectionIcon,
+                  render: sectionRender,
+                },
+              },
+              {
+                title: 'Info',
+                value: 'info',
+                blockEditor: {
+                  icon: infoIcon,
+                  render: infoRender,
                 },
               },
             ],
           },
         },
       ],
+    },
+    {
+      title: 'Patch',
+      name: 'songpatch',
+      type: 'string',
+    },
+    {
+      title: 'Notes',
+      name: 'notes',
+      type: 'string',
     },
   ],
 };

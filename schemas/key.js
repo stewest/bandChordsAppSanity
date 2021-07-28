@@ -14,7 +14,7 @@ export default {
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name',
+        source: 'keyName',
         maxLength: 5,
       },
     },
@@ -22,7 +22,7 @@ export default {
       name: 'position',
       title: 'Position',
       type: 'number',
-      description: 'The position of the key from C as 0',
+      description: 'The position of the key from C as 0. Lower is negative, higher is positive.',
     },
     {
       name: 'alternate_key',
