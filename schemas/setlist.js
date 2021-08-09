@@ -7,7 +7,7 @@ export default {
       name: 'setListName',
       title: 'SetList Name',
       type: 'string',
-      description: 'User Location like "The Bay Gig" with the date.',
+      description: 'User Location like "The Bay Gig" with the date. 2021-09-04 The Bay',
     },
     {
       name: 'setlistdate',
