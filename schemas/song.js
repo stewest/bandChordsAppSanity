@@ -16,6 +16,12 @@ const infoRender = (props) => (
   <span className="info" style={{ fontWeight: '100', fontStyle: 'italic' }}>{props.children}</span>
 );
 
+const highlightIcon = () => <span style={{ fontWeight: 'bold' }}>H</span>;
+const highlightRender = (props) => (
+  <span className="highlight font-extralight" style={{ fontWeight: '200', fontStyle: 'italic' }}>{props.children}</span>
+);
+
+
 export default {
   title: 'Song',
   name: 'song',
@@ -98,6 +104,14 @@ export default {
                   icon: infoIcon,
                   render: infoRender,
                 },
+              },
+              {
+                title: 'Highlight',
+                value: 'highlight',
+                blockEditor: {
+                  icon: highlightIcon,
+                  render: highlightRender,
+                }
               },
             ],
           },
